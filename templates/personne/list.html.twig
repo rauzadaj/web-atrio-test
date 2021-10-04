@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Age</td>
+    </tr>
+    {% for personne in list %}
+        <tr>
+            <td>{{ personne.lastname|e }}</td>
+            <td>{{ personne.firstname|e }}</td>
+            <td>{{ date().diff(date(personne.birthday)).y }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
